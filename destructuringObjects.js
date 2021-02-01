@@ -43,7 +43,3 @@ console.log(name, openingHours, categories);
 
 const { name: resturantName, openingHours: hours, categories: tags } = restaurant;
 console.log(resturantName, hours, tags);
-
-const people = {
-  names: ['jared', 'Maya', 'James'],
-};
