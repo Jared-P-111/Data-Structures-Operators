@@ -1,11 +1,15 @@
 'use-strict';
-const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-};
+
+/////////////////////////////SAMPLE OBJECT/////////////////////////////////
+
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+// };
+
 //////////////////////Desturcturing Arrays////////////////////////////
 
 // //Destructuing uses the [] to assign multiple variables to the array that is being destructured.
@@ -49,4 +53,36 @@ const restaurant = {
 // [one, two, three] = [three, two, one]; //<--Here we are switching the variables>
 // console.log(one, two, three); //output = first second third
 
-//------------------Using a function to ?????????---------------------------------------------------------
+//------------------Using a function/method to recieve two values with destructuring----------------------
+
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+//   drinks: [
+//     ['Pepsi', '7up', 'Root Beer'],
+//     ['Iced Tea', 'Lemonade'],
+//   ],
+
+//   order: function (starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
+// };
+
+// // Recieve 2 return values with destructuring assignment [stater, mainCourse]
+// const [starter, mainCourse] = restaurant.order(3, 2);
+// console.log(starter, mainCourse);
+
+// // Destructuing inside of Destructuring **************GREAT TRICK*************
+
+// const [[drink1], [drink2]] = restaurant.drinks; //Pepsi Iced Tea
+// console.log(drink1, drink2);
+// const [[, , drink3], [, drink4]] = restaurant.drinks; //Output = Root Beer Lemonade
+// console.log(drink3, drink4);
+
+// // Setting Default values (Good for not knowing the length of an array your looking into)
+
+// const [p = 1, q = 1, r = 1] = [8, 9];
+// console.log(p, q, r);
